@@ -2,7 +2,7 @@
 
 ## 1 系统要求
 
-- Linux/Windows 64 位操作系统
+- Ubuntu/Windows 64 位操作系统
 - Mysql 5.7
 - Redis 3.2
 - 必须有公网ip
@@ -18,6 +18,8 @@
 节点使用Redis/Mysql做数据缓存/存储，Graphene启动前必须先安装好他们
 
 ### 2.1 Windows版安装
+
+0.确保开启了时钟同步服务
 
 1.下载解压Graphene
 `http://7xqoxw.com1.z0.glb.clouddn.com/testnet-2100.rar`
@@ -109,6 +111,9 @@ node startup.js
 ```
 
 ### 2.2 Linux版安装
+
+0.Linux上需要ntp服务，可运行`service --status-all`查看服务是否正常运行。可自行运行
+apt-get/yum/zypper等包管理器工具安装ntp
 
 1.下载解压Graphene
 ```
