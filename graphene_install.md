@@ -138,7 +138,11 @@ tar zxvf ltest-2101.tar.gz
 ```
 bind 127.0.0.1
 ```
-并保存
+并保存，运行
+```
+redis-server redis.conf
+```
+启动redis，您也可以将redis注册为服务，以后重启机器会自动运行
 
 4.进入Graphene目录，修改config/volatile.json
 ```
@@ -191,15 +195,17 @@ port默认10086，您可以选择任意一个未被占用的端口。然后填�
 ```
 ./graphene start
 ```
+可以运行
+```
+./graphene status
+```
+查看服务运行状态
 
-7.升级服务，运行
+7.其他命令
 ```
 ./graphene upgrade
-```
-如果有新版本，则会自动下载解压替换并重启服务
+ 升级服务，如果有新版本，则会自动下载解压替换并重启服务
 
-8.其他命令
-```
 ./graphene ismainnet
  是否是主网络
 
