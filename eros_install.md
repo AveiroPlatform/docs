@@ -1,4 +1,4 @@
-# Graphene 节点安装
+# Eros 节点安装
 
 ## 1 系统要求
 
@@ -15,14 +15,14 @@
 
 测试版(testnet)与正式版(mainnet)除安装包、配置文件内容不一样外，安装流程是一样的<br>
 只要端口不冲突，可以同时在一台机器安装，但不推荐这样做，除非机器配置足够好<br>
-节点使用Redis/Mysql做数据缓存/存储，Graphene启动前必须先安装好他们
+节点使用Redis/Mysql做数据缓存/存储，Eros启动前必须先安装好他们
 
 ### 2.1 Windows版安装
 
 0.确保开启了时钟同步服务
 
-1.下载解压Graphene
-`http://7xqoxw.com1.z0.glb.clouddn.com/testnet-2100.rar`
+1.下载解压Eros
+`http://7xqp0w.com1.z0.glb.clouddn.com/testnet202.rar`
 可使用浏览器下载
 
 2.下载安装Mysql
@@ -58,7 +58,7 @@ redis-server.exe --service-start
 
 安装完毕Mysql后，您可以使用自带的Mysql Workbench，连接数据库服务端，并新建一个数据库，假设Schema的名字为blockchain
 
-5.进入Graphene目录，修改config/volatile.json
+5.进入Eros目录，修改config/volatile.json
 ```
  "__comment": "mysql connection configuration",
     "database": "",
@@ -115,10 +115,10 @@ node startup.js
 0.Linux上需要ntp服务，可运行`service --status-all`查看服务是否正常运行。可自行运行
 apt-get/yum/zypper等包管理器工具安装ntp
 
-1.下载解压Graphene
+1.下载解压Eros
 ```
-wget http://7xqoxw.com1.z0.glb.clouddn.com/ltest-2101.tar.gz
-tar zxvf ltest-2101.tar.gz
+wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet202.tar.gz
+tar zxvf ltestnet202.tar.gz
 ```
 
 2.安装Mysql
@@ -144,7 +144,7 @@ redis-server redis.conf
 ```
 启动redis，您也可以将redis注册为服务，以后重启机器会自动运行
 
-4.进入Graphene目录，修改config/volatile.json
+4.进入Eros目录，修改config/volatile.json
 ```
  "__comment": "mysql connection configuration",
     "database": "",
@@ -183,35 +183,35 @@ port默认10086，您可以选择任意一个未被占用的端口。然后填�
 
 5.进行到这步，命令行下运行
 ```
-./node ./bin/migrate.js --up
+./eros migrate --up
 ```
 然后运行
 ```
-./graphene test
+./eros test
 ```
 如果没有报错，则说明一切正常
 
 6.启动服务，运行
 ```
-./graphene start
+./eros start
 ```
 可以运行
 ```
-./graphene status
+./eros status
 ```
 查看服务运行状态
 
 7.其他命令
 ```
-./graphene upgrade
+./eros upgrade
  升级服务，如果有新版本，则会自动下载解压替换并重启服务
 
-./graphene ismainnet
+./eros ismainnet
  是否是主网络
 
-./graphene status
+./eros status
  服务状态，是否运行
 
-./graphene stop
+./eros stop
  关闭服务
 ```
