@@ -175,5 +175,5 @@ Proof Of Stake 权益证明共识算法，PoW 的替代方案。根据节点所�
 一种椭圆曲线加密/签名/密钥交换算法，由美国著名密码学家Daniel Julius Bernstein在 2006 年独立设计。有关各种椭圆曲线加密算法的分析和比较，可参考如下网址[https://safecurves.cr.yp.to/index.html](https://safecurves.cr.yp.to/index.html "https://safecurves.cr.yp.to/index.html")
 
 
-`[版权] 本文由Eros创始人编写，版权归Eros团队所有。如要引用，请注明引用来源`
+`[版权] 本文由Eros创始团队编写，版权归Eros团队所有。如要引用，请注明引用来源`
         `https://github.com/ErosPlatform/docs/blob/master/eros_whitepaper.md`
