@@ -22,7 +22,7 @@
 0.Windows上确保开启了时钟同步服务
 
 1.下载解压Eros，下载地址
-`http://7xqp0w.com1.z0.glb.clouddn.com/testnet-2.0.3.rar`
+`http://7xqp0w.com1.z0.glb.clouddn.com/testnet-2.0.4.rar`
 
 2.下载安装Mysql
 
@@ -116,7 +116,7 @@ apt-get/yum/zypper等包管理器工具安装ntp
 
 1.下载解压Eros，下载地址
 ```
-wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.3.tar.gz
+wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.4.tar.gz
 ```
 
 2.安装Mysql
@@ -198,6 +198,9 @@ port默认10086，您可以选择任意一个未被占用的端口。然后填�
 7.其他命令
 
 ```
+./eros migrate --down
+清空数据库
+
 ./eros status
 查看服务运行状态
 
