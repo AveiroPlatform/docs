@@ -127,7 +127,11 @@ wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.5.tar.gz
 
 选择 Linux - Generic 64位版本
 
-安装完毕之后，启动服务，并创建一个新数据库，假设名称为blockchain
+安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain
+
+```
+CREATE SCHEMA `blockchain` DEFAULT CHARACTER SET utf8;
+```
 
 3.下载安装Redis，建议使用Redis3.x的版本，您可以在官网下载源码，本地编译生成可执行文件。启动前，注意将`redis.conf`中
 ```
@@ -224,3 +228,9 @@ port默认10086，您可以选择任意一个未被占用的端口。然后填�
 ![mysql-err](http://admin.waketu.com/mysql-table-err.png)
 
 出现这个报错应该是数据库的表还不存在
+
+```
+Incorrect string value
+```
+
+出现这个报错应该是数据库编码问题。创建数据库的时候指定 utf8_general_ci。
