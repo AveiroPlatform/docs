@@ -130,7 +130,7 @@ wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.6.tar.gz
 安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain
 
 ```
-CREATE SCHEMA `blockchain` DEFAULT CHARACTER SET utf8;
+CREATE SCHEMA `blockchain` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 3.下载安装Redis，建议使用Redis3.x的版本，您可以在官网下载源码，本地编译生成可执行文件。启动前，注意将`redis.conf`中
