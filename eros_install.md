@@ -22,7 +22,7 @@
 0.Windows上确保开启了时钟同步服务
 
 1.下载解压Eros，下载地址
-`http://7xqp0w.com1.z0.glb.clouddn.com/testnet-2.0.17.rar`
+`http://7xqp0w.com1.z0.glb.clouddn.com/testnet-2.0.18.rar`
 
 2.下载安装Mysql 5.7.22
 
@@ -116,7 +116,7 @@ apt-get/yum/zypper等包管理器工具安装ntp
 
 1.下载解压Eros，下载地址
 ```
-wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.17.tar.gz
+wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.18.tar.gz
 ```
 
 2.安装Mysql 5.7.22
