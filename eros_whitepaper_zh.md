@@ -76,6 +76,33 @@ Eros在Javascript V8引擎的基础上实现了满足上述三点要求的智能
 
 在Eros系统中，智能合约VM执行的结果是一笔交易，也会随着随后的区块广播到全网，其结果将受到全网节点验证。智能合约代码是一份脚本文件。用户可以使用webpack等打包工具，将多个模块打包生成一份合约代码。
 
+例子：一个实现转账功能的合约
+
+```js
+/*
+  main 为合约的入口函数，返回一个 json 格式的字符串
+*/
+function main(args) {
+  var strget = storageGet()
+  var getObj = []
+  if (strget) {
+    getObj = JSON.parse(strget)
+  }
+  if (getObj.indexOf(requesterKey) >= 0) {
+    return JSON.stringify({
+      amount: 0
+    })
+  } else {
+    getObj.push(requesterKey)
+    storageSet(JSON.stringify(getObj))
+    return JSON.stringify({
+      amount: 5
+    })
+  }
+}
+
+```
+
 ## Eros的数据存储方案
 
 Eros使用Redis做内存缓存，使用Mysql做数据存储。Redis是完全基于内存的数据库，将活跃数据缓存入Redis，可以有效的降低Mysql的I/O次数，进而提升整个系统的吞吐量。Mysql也有成熟的基于内存的存储引擎，因此不经修改，Eros就可实现完全基于内存的存储方案。Mysql作为老牌的关系型数据库，已被大量应用于电商等对数据一致性要求高的商业场景中，比起SQLite这种嵌入式关系型数据库，虽然安装稍微复杂了一些，但由此带来的性能提升和获得的满足多样化的商业场景的能力是显著的。
