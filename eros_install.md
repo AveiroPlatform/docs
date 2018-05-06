@@ -57,7 +57,9 @@ redis-server.exe --service-start
 
 4.新建一个Mysql数据库
 
-安装完毕Mysql后，您可以使用自带的Mysql Workbench，连接数据库服务端，并新建一个数据库，假设Schema的名字为blockchain
+安装完毕Mysql后，您可以使用自带的Mysql Workbench，连接数据库服务端，并新建一个数据库，假设Schema的名字为blockchain，务必选择 utf8_general_ci 编码方式
+
+![win-mysql-create](http://7xqoxy.com1.z0.glb.clouddn.com/win-databasename_20180506092955.png)
 
 5.进入Eros目录，修改config/volatile.json
 ```
@@ -131,7 +133,7 @@ wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.18.tar.gz
 
 ![linux-mysql-download](http://7xqoxy.com1.z0.glb.clouddn.com/lmysql_20180506091835.png)
 
-安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain
+安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain，创建数据库应使用下面的语句：
 
 ```
 CREATE SCHEMA `blockchain` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
