@@ -15,7 +15,7 @@ Eros系统是基于nodejs的区块链商业应用与开发平台。Eros本身的
 
 3.使用关系型数据库，支持多种数据源
 
-4.实现运行JavaScript的防假死智能合约VM
+4.提供图灵完备的JavaScript智能合约虚拟机
 
 5.改进DPOS，但不增加共识负担
 
@@ -76,7 +76,7 @@ Eros在Javascript V8引擎的基础上实现了满足上述三点要求的智能
 
 在Eros系统中，智能合约VM执行的结果是一笔交易，也会随着随后的区块广播到全网，其结果将受到全网节点验证。智能合约代码是一份脚本文件。用户可以使用webpack等打包工具，将多个模块打包生成一份合约代码。
 
-例子：一个实现转账功能的合约
+以下代码是官方一次送token的活动中使用的合于
 
 ```js
 /*
@@ -87,6 +87,11 @@ function main(args) {
   var getObj = []
   if (strget) {
     getObj = JSON.parse(strget)
+  }
+  if (getObj.length > 50) {
+    return JSON.stringify({
+      amount: 0
+    })
   }
   if (getObj.indexOf(requesterKey) >= 0) {
     return JSON.stringify({
@@ -103,7 +108,7 @@ function main(args) {
 
 ```
 
-执行合约代码会消耗token，测试网络下，一个token可以执行 10000 步。消耗的token与实际执行步数满足：`代笔消耗量=O(n)`。因此正常情况下，执行一个合约远不会消耗完一个token。合约执行导致token不够，往往是因为代码出错。VM 抛出此类异常将导致合约作废，并会扣除合约作者少量token。用这种方式防止此类合约不合理的消耗系统资源。
+执行合约代码会消耗token，测试网络下，一个token可以执行 10000 步。消耗的token与实际执行步数满足：`代笔消耗量=O(n)`。因此正常情况下，执行一个合约远不会消耗完一个token。合约执行导致token不够，往往是因为代码出错。VM 抛出此类异常将导致合约作废，并会扣除合约作者少量token。用这种方式防止此类合约不合理的消耗系统资源。Eros 合约足够灵活，一个甚至没有token的账户也可以安全的调用合约。
 
 ## Eros的数据存储方案
 
