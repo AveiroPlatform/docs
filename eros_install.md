@@ -32,6 +32,8 @@
 
 选择 Windows 64 位版本
 
+![win-mysql-download](http://7xqoxy.com1.z0.glb.clouddn.com/wmysql_20180506091749.png)
+
 3.下载安装 Redis
 
 下载链接为
@@ -127,6 +129,8 @@ wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.18.tar.gz
 
 选择 Linux - Generic 64位版本
 
+![linux-mysql-download](http://7xqoxy.com1.z0.glb.clouddn.com/lmysql_20180506091835.png)
+
 安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain
 
 ```
@@ -220,12 +224,12 @@ port默认10086，您可以选择任意一个未被占用的端口。然后填�
 
 ### 2.3 问题定位
 
-![redis-err](http://admin.waketu.com/redis-err.png)
+![redis-err](http://7xqoxy.com1.z0.glb.clouddn.com/redis-err.png)
 
 出现这个报错的原因应该是redis没有启动起来
 
 
-![mysql-err](http://admin.waketu.com/mysql-table-err.png)
+![mysql-err](http://7xqoxy.com1.z0.glb.clouddn.com/mysql-table-err.png)
 
 出现这个报错应该是数据库的表还不存在
 
