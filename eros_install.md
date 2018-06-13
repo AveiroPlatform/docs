@@ -133,6 +133,8 @@ wget http://7xqp0w.com1.z0.glb.clouddn.com/ltestnet-2.0.20.tar.gz
 
 ![linux-mysql-download](http://7xqoxy.com1.z0.glb.clouddn.com/lmysql_20180506091835.png)
 
+下载链接 （`https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz`）
+
 安装完毕之后，启动服务，并创建一个新数据库，假设名称为 blockchain，创建数据库应使用下面的语句：
 
 ```
